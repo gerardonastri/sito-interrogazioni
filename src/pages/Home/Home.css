@@ -1,0 +1,106 @@
+.home{
+    width: 100%;
+    position: relative;
+}
+
+.home__bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.home__bg img{
+    height: 100%;
+    width: 100%;
+}
+.home__container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.extraction, .extractionTime{
+    z-index: 2;
+    color: black;
+    text-align: center;
+    transition: all 1s ease-in;
+    position: absolute;
+}
+
+.extraction h1, .extractionTime h1{
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.extraction h3, .extractionTime h3{
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.extraction__info{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.show{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.divider{
+    width: 100%;
+    background-color: pink;
+    height: 5px;
+    margin: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.5s ease;
+}
+.extractionTime__content{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.vertical-divider{
+    background-color: pink;
+    width: 5px;
+    margin: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.5s ease;
+}
+
+.extractionTime h3{
+    font-size: 70px !important;
+}
+
+.extraction__container{
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 45%;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .extraction__container{
+        width: 95%;
+        border-radius: 50%;
+    }
+}
