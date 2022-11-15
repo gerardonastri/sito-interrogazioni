@@ -5,6 +5,7 @@ import { axiosReq } from '../../utils/apiCalls'
 import { loginSuccess } from '../../redux/userSlice'
 import bg from '../../images/home-bg.jpeg'
 import './Register.css'
+import registerBg from '../../images/reggisfondo.png'
 
 
 const Register = () => {
@@ -19,27 +20,32 @@ const Register = () => {
 
   const handleSubmit = async () => {
     const emailSchool = email.split("@")[1]
-    if(emailSchool !== "issmargheritahackbaronissi.edu.it"){
+    if(nome.length === 0 || cognome.length === 0 || telefono.length === 0 || email.length === 0 || password.length === 0){
+      setError("Compila tutti i campi")
+    } else if(emailSchool !== "issmargheritahackbaronissi.edu.it"){
       setError("Devi usare l'email della scuola")
     } else {
-      try {
-        const res = await axiosReq.post("auth/register", {
-          nome,
-          cognome,
-          telefono,
-          email,
-          password
-        })
-        dispatch(loginSuccess(res.data))
-        window.location.replace("/")
-      } catch (error) {
-        console.log(error);
-      }
+        try {
+          const res = await axiosReq.post("auth/register", {
+            nome,
+            cognome,
+            telefono,
+            email,
+            password
+          })
+          dispatch(loginSuccess(res.data))
+          window.location.replace("/")
+        } catch (error) {
+          console.log(error);
+        }
     }
   }
 
   return (
     <div className='register'>
+      <div className="home__bg">
+        <img src={registerBg} alt="" />
+      </div>
       <div className="register__content">
         <div className="register__left">
           <h1>Register</h1>

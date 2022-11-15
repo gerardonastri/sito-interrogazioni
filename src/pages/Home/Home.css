@@ -84,7 +84,7 @@
 
 .extraction__container{
     background-color: white;
-    width: 700px;
+    width: 650px;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -93,7 +93,15 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%);
-    border-radius: 45%;
+    border-radius: 50%;
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1500px) {
+    .extraction__container{
+        width: 500px;
+        height: 270px;
+    }
 }
 
 
