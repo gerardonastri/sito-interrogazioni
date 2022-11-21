@@ -72,10 +72,14 @@ const NewDeatils = () => {
                     )}
                 </div>
                 <div className="details__content-completed">
-                    <h3>Interrogazioni completate</h3>
-                    {user?.interrogazioniFatte?.map(interrogazione => (
-                        <Interrogazione interrogazione={interrogazione} type="completed" deleteInterrogazione={deleteInterrogazione} completaInterrogazione={completaInterrogazione} />
-                    ))}
+                    {user?.interrogazioniFatte.length > 0 && (
+                        <>
+                        <h3>Interrogazioni completate</h3>
+                        {user?.interrogazioniFatte?.map(interrogazione => (
+                            <Interrogazione interrogazione={interrogazione} type="completed" deleteInterrogazione={deleteInterrogazione} completaInterrogazione={completaInterrogazione} />
+                        ))}
+                        </>
+                    )}
                 </div>
             </div>
         </div>
