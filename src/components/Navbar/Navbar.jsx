@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logoImg from '../../images/logo.png'
+import logoImg from '../../images/logo2.png'
 import { useState } from 'react'
 import { logout } from '../../redux/userSlice'
 import { useDispatch } from 'react-redux'
@@ -21,9 +21,9 @@ const Navbar = () => {
     <div className={isHome[1].length === 0 ? "navbar blurred" :'navbar'}>
       <div className="navbar__wrapper">
         <a href="/">Home</a>
-        <div className="navbar__img">
+        <a className="navbar__img" href="/">
           <img src={logoImg} alt="" />
-        </div>
+        </a>
         <div className='hamburger' onClick={() => {
           setIsActive(prev => !prev);
           }}>
