@@ -22,7 +22,7 @@ const Register = () => {
     const emailSchool = email.split("@")[1]
     if(nome.length === 0 || cognome.length === 0 || telefono.length === 0 || email.length === 0 || password.length === 0){
       setError("Compila tutti i campi")
-    } else if(emailSchool !== "issmargheritahackbaronissi.edu.it"){
+    } else if(emailSchool !== "iismargheritahackbaronissi.edu.it"){
       setError("Devi usare l'email della scuola")
     } else {
         try {
@@ -71,7 +71,9 @@ const Register = () => {
           <div className="register__right-text">
             <h1>Sei già registrato?</h1>
             <h3>Clicca sul pulsante e accedi al tuo <br /> account personale</h3>
-            <button>accedi</button>
+            <a href="/login">
+              <button>accedi</button>
+            </a>
             <span>oppure</span>
             <a href="/">torna alla home page</a>
           </div>

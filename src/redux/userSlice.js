@@ -22,7 +22,7 @@ const userSlice = createSlice({
         state.error = true
       },
       logout: (state) => {
-        state.currentUser = initialState
+        state.currentUser = null
       }
     }
 })

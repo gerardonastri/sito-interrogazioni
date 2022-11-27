@@ -9,20 +9,24 @@ import { useEffect } from 'react'
 const NewDeatils = () => {
 
     const [user, setUser] = useState(null)
-    //implementare questo state con un componente così che ogni interrogazione possa avere le sue azioni e modificare se stessa
     const currentUser = useSelector(state => state.currentUser)
+
 
     useEffect(() => {
         const getUser = async () => {
-            try {
-                const res = await axiosReq.get(`user/find/${currentUser._id}`)
-                setUser(res.data)
-            } catch (error) {
-                console.log(error);
+            if(currentUser._id){
+                try {
+                    const res = await axiosReq.get(`user/find/${currentUser._id}`)
+                    setUser(res.data)
+                } catch (error) {
+                    console.log(error);
+                }
+            } else {
+                window.location.replace("/login")
             }
         }
         getUser()
-    }, [currentUser._id])
+    }, [])
 
     //completa interrogazione
     const completaInterrogazione = async ( materia, data, interrogazioneId) => {

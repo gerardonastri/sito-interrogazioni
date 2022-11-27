@@ -1,0 +1,115 @@
+.adminMain{
+    flex: 10;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+/*NAVBAR*/
+.adminMain__navbar{
+    width: 100%;
+    background-color: rgb(253, 253, 253);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.adminMain__navbar-search{
+    background-color: transparent;
+    border: 1px solid rgba(100,197,177,.6);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 35px;
+    padding: 0 20px;
+}
+.adminMain__navbar-search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 12px;
+}
+.adminMain__navbar-search svg{
+    color: rgba(100,197,177,.6);
+    cursor: pointer;
+}
+.adminMain__navbar-info{
+    display: flex;
+    align-content: center;
+    gap: 30px;
+    margin-right: 40px;
+    color: var(--color-blue);
+}
+.adminMain__navbar-info h3{
+    text-transform: capitalize;
+}
+
+
+/*ADMIN CONTENT*/
+.adminMain__content{
+    padding: 60px 50px 0 50px;
+    display: flex;
+    gap: 50px;
+}
+.adminMain__content-item{
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px -2px #000000; 
+    box-shadow: 0px 0px 8px -2px #000000;
+    padding: 30px;
+    flex: 1;
+}
+.user__img{
+    width: 60px;
+    height: 60px;
+}
+.user__img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    border-radius: 50%;
+}
+.adminMain__content-item h2{
+    color: var(--color-pink);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+.adminMain__content-user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.adminMain__content-user h3{
+    font-size: 18px;
+}
+
+/*estrazione item*/
+.estrazione__fields{
+    display: flex;
+    width: 100%;
+
+}
+.estrazione__fields h3{
+    flex: 1;
+}
+.estrazione__items{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+.estrazione__items-estratti, .estrazione__items > span{
+    flex: 1;
+}
+.estrazione__items-estratti{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+}
+.estrazione__items > span{
+    color: gray;
+}

@@ -53,7 +53,9 @@ const Login = () => {
         <div className="login__left-text">
           <h1>Sei un nuovo utente?</h1>
           <p>crea il tuo personale account dove potrai gestire interrogazioni e impegni</p>
-          <button>register</button>
+          <a href="/register">
+            <button>register</button>
+          </a>
           <span>oppure</span>
           <a href="/">torna alla home page</a>
         </div>

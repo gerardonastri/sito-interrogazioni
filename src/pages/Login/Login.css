@@ -62,7 +62,7 @@
     opacity: 0.5;
 }
 
-.login__left-text a{
+.login__left-text a:last-child{
     opacity: 0.5;
 }
 
