@@ -14,7 +14,11 @@ const NewDeatils = () => {
 
     useEffect(() => {
         const getUser = async () => {
+<<<<<<< HEAD
             if(currentUser._id){
+=======
+            if(currentUser){
+>>>>>>> 329c923deff5bb15590e5f6c84d0c494d402bdf0
                 try {
                     const res = await axiosReq.get(`user/find/${currentUser._id}`)
                     setUser(res.data)
