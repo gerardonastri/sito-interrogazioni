@@ -10,7 +10,7 @@ const Admin = () => {
 
     useEffect(() => {
         const pushUser = () => {
-            if(!currentUser._id || !currentUser?.isAdmin){
+            if(!currentUser?._id || !currentUser?.isAdmin){
                 window.location.replace("/")
             }
         }

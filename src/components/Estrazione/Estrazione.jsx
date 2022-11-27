@@ -18,7 +18,7 @@ const Estrazione = ({estrazione}) => {
     return () => clearInterval(intervalId);
   }, [showExtractions, showExtractionTime])
 
-
+  console.log(estrazione && estrazione);
   return (
     <div className="extraction__container">
         {estrazione ? (
