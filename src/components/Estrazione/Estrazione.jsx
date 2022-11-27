@@ -29,11 +29,11 @@ const Estrazione = ({estrazione}) => {
                         {estrazione?.estratti?.map((estratto, i) => (
                             <>
                                 {i  === 0 ? (
-                                    <h3 className={showExtractions ? "extraction__info show"  : "extraction__info"}>{estratto.name}</h3>
+                                    <h3 className={showExtractions ? "extraction__info show"  : "extraction__info"}>{estratto.nome} {estratto.cognome}</h3>
                                 ) : (
                                 <>
                                     <div className={showExtractions ? "divider show" : "divider"}></div>
-                                    <h3 className={showExtractions ? "extraction__info show"  : "extraction__info"}>{estratto.name}</h3>
+                                    <h3 className={showExtractions ? "extraction__info show"  : "extraction__info"}>{estratto.nome} {estratto.cognome}</h3>
                                 </>
                                 )}
                             </>

@@ -38,7 +38,7 @@ const AdminMain = ({currentUser}) => {
           <input type="text" name="" placeholder='Search here...' />
         </div>
         <div className="adminMain__navbar-info">
-          <h3>{currentUser.nome} {currentUser.cognome}</h3>
+          <h3>{currentUser?.nome} {currentUser?.cognome}</h3>
           <MdNotifications />
           <AiFillMail />
         </div>
