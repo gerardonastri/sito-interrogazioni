@@ -29,8 +29,8 @@
 }
 
 .navbar img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     object-fit: cover;
 }
 
@@ -103,17 +103,14 @@
     background-color: black;
     transition: all 0.7s ease;
 }
-<<<<<<< HEAD
 /* .bar:nth-child(1),
 .bar:nth-child(3){
     height: 2.5px;
 }  */
-=======
 .bar:nth-child(1),
 .bar:nth-child(3){
     height: 2.5px;
 } 
->>>>>>> 329c923deff5bb15590e5f6c84d0c494d402bdf0
 .bar:last-child{
     margin-bottom: 0;
 }

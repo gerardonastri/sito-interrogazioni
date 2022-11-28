@@ -32,11 +32,13 @@
 .login__left-text p{
     opacity: 0.5;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .login__left-text > h1{
     font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .login__left-text button{
@@ -64,6 +66,7 @@
 
 .login__left-text a:last-child{
     opacity: 0.5;
+    text-decoration: underline;
 }
 
 /*LOGIN RIGHT*/

@@ -2,6 +2,6 @@
 .extraction__container h1{
     color: var(--color-blue);
     font-size: 2rem;
-    max-width: 95%;
     text-align: center;
+    font-weight: 400;
 }
