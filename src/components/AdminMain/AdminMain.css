@@ -2,6 +2,7 @@
     flex: 10;
     height: 100vh;
     background-color: antiquewhite;
+    position: relative;
 }
 
 /*NAVBAR*/
@@ -38,7 +39,7 @@
 }
 .adminMain__navbar-info{
     display: flex;
-    align-content: center;
+    align-items: center;
     gap: 30px;
     margin-right: 40px;
     color: var(--color-blue);
@@ -112,4 +113,10 @@
 }
 .estrazione__items > span{
     color: gray;
+}
+
+
+.showEstrazioneForm{
+    font-weight: 500;
+    cursor: pointer;
 }

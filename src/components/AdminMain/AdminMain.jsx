@@ -6,12 +6,15 @@ import {AiFillMail} from 'react-icons/ai'
 import img from '../../images/user.png'
 import {axiosReq} from '../../utils/apiCalls'
 import Moment from 'react-moment'
+import EstrazioneForm from '../EstrazioneForm/EstrazioneForm'
 
 
 const AdminMain = ({currentUser}) => {
 
   const [users, setUsers] = useState(null)
   const [estrazione, setEstrazione] = useState(null)
+
+  const [showForm, setShowForm] = useState(false)
 
   useEffect(() => {
     const getUsers = async () => {
@@ -27,7 +30,6 @@ const AdminMain = ({currentUser}) => {
     getUsers()
   },[])
 
-  console.log(estrazione);
 
   return (
     <div className='adminMain'>
@@ -39,6 +41,7 @@ const AdminMain = ({currentUser}) => {
         </div>
         <div className="adminMain__navbar-info">
           <h3>{currentUser?.nome} {currentUser?.cognome}</h3>
+          <span className='showEstrazioneForm' onClick={() => setShowForm(true)}>Estrazione</span>
           <MdNotifications />
           <AiFillMail />
         </div>
@@ -76,6 +79,9 @@ const AdminMain = ({currentUser}) => {
           </div>
         </div>
       </div>
+      {showForm && (
+        <EstrazioneForm setShowForm={setShowForm} />
+      )}
     </div>
   )
 }
