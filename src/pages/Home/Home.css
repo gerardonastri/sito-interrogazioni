@@ -93,7 +93,7 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%);
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 
@@ -110,5 +110,8 @@
     .extraction__container{
         width: 95%;
         border-radius: 50%;
+    }
+    .extraction__container h1{
+        font-size: 1.5rem;
     }
 }
