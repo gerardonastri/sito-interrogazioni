@@ -8,7 +8,7 @@
     background-color: var(--color-pink);
 }
 
-.blurred{
+.navbar__home{
     background-color: rgba(255,255,255,0.4) !important;
 }
 .navbar__wrapper{

@@ -34,7 +34,7 @@ const AdminMain = ({currentUser}) => {
   return (
     <div className='adminMain'>
       {/*ADMIN NAVBAR*/}
-      <div className="adminMain__navbar">
+      <div className={showForm ? "adminMain__navbar blurred": "adminMain__navbar"}>
         <div className="adminMain__navbar-search">
           <BiSearchAlt2 />
           <input type="text" name="" placeholder='Search here...' />
@@ -47,7 +47,7 @@ const AdminMain = ({currentUser}) => {
         </div>
       </div>
       {/*ADMIN CONTENT*/}
-      <div className="adminMain__content">
+      <div className={showForm ? "adminMain__content blurred": "adminMain__content"}>
         <div className="adminMain__content-item">
           <h2>Users</h2>
           {users?.map(user => (
@@ -60,23 +60,29 @@ const AdminMain = ({currentUser}) => {
           ))}
         </div>
         <div className="adminMain__content-item">
-          <h2>Estrazione</h2>
-          <div className="estrazione__fields">
-            <h3>Estratti</h3>
-            <h3>Orario</h3>
-          </div>
-          <div className="estrazione__items">
-            <div className="estrazione__items-estratti">
-              {estrazione?.estratti.map(estratto => (
-                <span>{estratto.nome} {estratto.cognome}</span>
-              ))}
-            </div>
-            <span>
-              <Moment format="DD/MM/YYYY, hh:mm">
-              {estrazione?.orarioEstrazione}
-              </Moment>
-            </span>
-          </div>
+          {estrazione ? (
+            <>
+              <h2>Estrazione</h2>
+              <div className="estrazione__fields">
+                <h3>Estratti</h3>
+                <h3>Orario</h3>
+              </div>
+              <div className="estrazione__items">
+                <div className="estrazione__items-estratti">
+                  {estrazione?.estratti.map(estratto => (
+                    <span>{estratto.nome} {estratto.cognome}</span>
+                  ))}
+                </div>
+                <span>
+                  <Moment format="DD/MM/YYYY, hh:mm">
+                    {estrazione?.orarioEstrazione}
+                  </Moment>
+                </span>
+              </div>
+            </>
+          ) : (
+            <h2 className='adminMain__content-noItem'>Non è stata effettuata nessuna estrazione</h2>
+          )}
         </div>
       </div>
       {showForm && (

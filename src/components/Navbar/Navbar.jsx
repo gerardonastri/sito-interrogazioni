@@ -22,7 +22,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className={isHome[1].length === 0 ? "navbar blurred" :'navbar'}>
+    <div className={isHome[1].length === 0 ? "navbar navbar__home" :'navbar'}>
       <div className="navbar__wrapper">
         <a href="/">Home</a>
         <a className="navbar__img" href="/">
@@ -39,12 +39,13 @@ const Navbar = () => {
       <div className={isActive ?  "navbar__sidebar show" : "navbar__sidebar"}>
         <div className="navbar__sidebar-links">
           {currentUser ? (
+            <>
             <a href="#" onClick={handleLogout}>Logout</a>
+            <a href="/details">Interrogazioni</a>
+            </>
           ) : (
             <a href="/login">Login</a>
           )}
-          
-          <a href="/details">Interrogazioni</a>
           {/* <a href="/">Contatti</a>
           <a href="/">Servizi</a> */}
         </div>
