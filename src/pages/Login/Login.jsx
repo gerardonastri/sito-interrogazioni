@@ -12,6 +12,7 @@ import { useState } from 'react'
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
   const dispatch = useDispatch()
 
   const signInWithGoogle = async () => {
@@ -31,15 +32,21 @@ const Login = () => {
   }
 
   const handleSubmit = async () => {
-    try {
-      const res = await axiosReq.post("auth/login", {
-        email,
-        password
-      })
-      dispatch(loginSuccess(res.data))
-      window.location.replace("/")
-    } catch (error) {
-      console.log(error);
+    if(email.length > 0 && password.length > 0){
+      try {
+        const res = await axiosReq.post("auth/login", {
+          email,
+          password
+        })
+        dispatch(loginSuccess(res.data))
+        window.location.replace("/")
+      } catch (error) {
+        if(error.response.status){
+          setError("Email o Password errata")
+        }
+      }
+    } else {
+      setError("Compila tutti i campi")
     }
   }
 
@@ -74,7 +81,7 @@ const Login = () => {
           <div className="form-btn">
             <button onClick={handleSubmit}>Log-in</button>
           </div>
-
+          <p className="error">{error}</p>
         </div>
       </div>
     </div>
