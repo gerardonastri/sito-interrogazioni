@@ -153,4 +153,13 @@
     .inputGroup input{
         width: 200px;
     }
+    .login__left{
+        height: 60vh;
+    }
+    .login__left-bg{
+        height: 70vh;
+    }
+    .login__left-text{
+        top: 10%;
+    }
 }
