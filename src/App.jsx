@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import NewDeatils from './pages/NewDetails/NewDeatils'
 import Admin from './pages/Admin/Admin'
+import UserDetails from './pages/UserDetails/UserDetails'
 
 
 const Layout = () => {
@@ -50,6 +51,10 @@ function App() {
     }, {
       path: "/admin",
       element: <Admin />
+    },
+    {
+      path: "/admin/user/:id",
+      element: <UserDetails />
     }
   ])
 

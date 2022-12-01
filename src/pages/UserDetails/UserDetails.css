@@ -1,0 +1,41 @@
+.userDetails__fields{
+    display: flex;
+    align-items: center;
+}
+.userDetails__fields h3{
+    flex: 1;
+    text-align: center;
+}
+.userDetails__items{
+    display: flex;
+    align-items: center;
+}
+.userDetails__items span{
+    flex: 1;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+.userDetails__items-interrogazioni{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.userDetails__items-interrogazioni span{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    .userDetails .adminMain__content-item{
+        flex-direction: column;
+    }
+    .userDetails__fields h3{
+        font-size: 14px;
+    }
+}

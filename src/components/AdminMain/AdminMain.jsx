@@ -51,12 +51,12 @@ const AdminMain = ({currentUser}) => {
         <div className="adminMain__content-item">
           <h2>Users</h2>
           {users?.map(user => (
-            <div className="adminMain__content-user">
+            <a href={`/admin/user/${user._id}`} className="adminMain__content-user">
               <div className="user__img">
                 <img src={img} alt="" />
               </div>
               <h3>{user.nome} {user.cognome}</h3>
-            </div>
+            </a>
           ))}
         </div>
         <div className="adminMain__content-item">
